@@ -49,3 +49,11 @@ r
 lr
 y
 L
+
+
+### Glyph set
+### Consonants
+taBase daBase TaBase DaBase kaBase gaBase tHaBase dHaBase kHaBase gHaBase saBase thaBase shaBase lhaBase khaBase HaBase hhaBase chaBase cHaBase naBase NaBase ngaBase raBase lraBase yaBase LaBase tsaBase TTaBase
+
+### Vowels
+AhBase EhBase IhBase UhBase iBase uBase AeBase EoBase AiBase
