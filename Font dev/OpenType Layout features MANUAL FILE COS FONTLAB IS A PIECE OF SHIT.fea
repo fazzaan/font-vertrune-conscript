@@ -75,6 +75,9 @@ languagesystem latn dflt;
 @AllLetters = [ @AllConsonants @AllVowels ];
 
 
+# FEATURES START ______________________________
+
+
 feature calt {
 # Contextual Alternates
 
@@ -108,7 +111,7 @@ sub n by naBase;
 sub [ b N ] by NaBase;
 sub m by ngaBase;
 sub r by raBase;
-sub p by lraBase;
+sub [ p R ] by lraBase;
 sub y by yaBase;
 sub L by LaBase;
 sub z by tsaBase;
@@ -126,25 +129,25 @@ sub u by UhBase;
 sub U by uBase;
 
 # SPACER HACK (remove later when spacer glyphs have been made)
-sub space by Spacer;
-sub Spacer Spacer by space;
+# sub space by Spacer;
+# sub Spacer Spacer by space;
 
 
 ### Class consonants by if they have flat tops and bottoms
 
-@flatBaseFull = [ @gHa @ra @ya ]; # full-width
-# @flatBaseSpacerFull = [ gHaBaseSpacer raBaseSpacer yaBaseSpacer ]; # Spacing variant - vertical line beneath
-@flatBaseLeft = [ @ga @na ];
-# @flatBaseSpacerLeft = [ gaBaseSpacer naBaseSpacer ];
-@flatBaseRight = [ @ta @lha @Ha @cha @cHa ];
-# @flatBaseSpacerRight = [ taBaseSpacer lhaBaseSpacer HaBaseSpacer chaBaseSpacer cHaBaseSpacer ];
+@flatBotFull = [ @gHa @ra @ya ]; # full-width
+# @flatBotSpacerFull = [ gHaBaseSpacer raBaseSpacer yaBaseSpacer ]; # Spacing variant - vertical line beneath
+@flatBotLeft = [ @ga @na ];
+# @flatBotSpacerLeft = [ gaBaseSpacer naBaseSpacer ];
+@flatBotRight = [ @ta @lha @Ha @cha @cHa ];
+# @flatBotSpacerRight = [ taBaseSpacer lhaBaseSpacer HaBaseSpacer chaBaseSpacer cHaBaseSpacer ];
 
 @flatTopFull = [ @Da @dHa @sa @tha @lha @kha @Ha @lra @La @cha @cHa ];
 @flatTopSpacerFull = [ DaBaseTopSpacer dHaBaseTopSpacer saBaseTopSpacer thaBaseTopSpacer lhaBaseTopSpacer khaBaseTopSpacer HaBaseTopSpacer lraBaseTopSpacer LaBaseTopSpacer chaBaseTopSpacer cHaBaseTopSpacer ];
 @flatTopLeft = [ @da @hha ];
 @flatTopSpacerLeft = [ daBaseTopSpacer hhaBaseTopSpacer ]; # Spacing variant - vertical line above
-@flatTopRight = [ @kHa @Na ];
-@flatTopSpacerRight = [ kHaBaseTopSpacer NaBaseTopSpacer ];
+@flatTopRight = [ @kHa @na @Na ];
+@flatTopSpacerRight = [ kHaBaseTopSpacer naBaseTopSpacer NaBaseTopSpacer ];
 
 # Flats on top AND bottom 
 ### not currently necessary
@@ -157,30 +160,24 @@ sub Spacer Spacer by space;
 
 @flatTopAll          = [ @flatTopFull         @flatTopLeft          @flatTopRight ];
 @flatTopSpacerAll = [ @flatTopSpacerFull @flatTopSpacerLeft @flatTopSpacerRight ];
+@flatTopSpacerNotFlatBot = [ DaBaseTopSpacer dHaBaseTopSpacer saBaseTopSpacer thaBaseTopSpacer khaBaseTopSpacer lraBaseTopSpacer LaBaseTopSpacer daBaseTopSpacer kHaBaseTopSpacer hhaBaseTopSpacer ];
 
-# @flatBaseAll = [ @flatBaseFull @flatBaseLeft @flatBaseRight ];
-# @flatBaseSpacerAll = [ @flatBaseSpacerFull @flatBaseSpacerLeft @flatBaseSpacerRight ];
+@flatBotAll = [ @flatBotFull @flatBotLeft @flatBotRight ];
+# @flatBotSpacerAll = [ @flatBotSpacerFull @flatBotSpacerLeft @flatBotSpacerRight ];
 
-@flatTopNot = [ space @AllVowels @ta @Ta @ka @ga @tHa @gHa @sha @nga @ra @ya @tsa @TTa ];
-@flatBaseNot = [ space @AllVowels @da @Ta @Da @ka @tHa @dHa @kHa @sa @tha @sha @kha @hha @nga @lra @La @tsa @TTa ];
+@NotFlatTop = [ space @AllVowels @ta @Ta @ka @ga @tHa @gHa @sha @nga @ra @ya @tsa @TTa ];
+@NotFlatBot = [ space @AllVowels @flatTopSpacerNotFlatBot @da @Ta @Da @ka @tHa @dHa @kHa @sa @tha @sha @kha @hha @nga @lra @La @tsa @TTa  ];
 
-#ignore sub @flatBaseAll @flatTopNot;
-#sub @flatBaseAll by @flatBaseSpacerAll;
+#ignore sub @flatBotAll @flatTopNot;
+#sub @flatBotAll by @flatBotSpacerAll;
 
-ignore sub @flatBaseNot @flatTopAll';
-sub @flatTopAll' by @flatTopSpacerAll;
+#ignore sub @NotFlatBot @flatTopAll';
+#sub @flatTopAll' by @flatTopSpacerAll;
+sub @flatBotAll @flatTopAll' by @flatTopSpacerAll;
 #ignore sub @AllLetters @flatTopSpacerAll';
 #sub @flatTopSpacerAll' by @flatTopAll;
 
 } calt;
 
-feature init {
-# Initial Forms
 
-#> feature
-#< feature
-
-sub @flatTopSpacerAll by @flatTopAll;
-
-} init;
 
