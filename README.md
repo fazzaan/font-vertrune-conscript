@@ -1,4 +1,7 @@
-# font-vihnkkeol-conscript
+# Font for Vihnkkeol Conscript
+_First font designed for conscript "Vihnkkeol" for conlang "lhaedy tṡukh thul", by Dr. Nyeh._
+
+* Conscript _Vihnkkeol_ is written vertically, top-to-bottom, left-to-right. You can enable this setting in most word processors and graphics apps.  
 
 <details>
   <summary>Image of font at v0.300</summary>
