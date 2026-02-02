@@ -1,4 +1,4 @@
-# font-vertrune-conscript
+# font-vihnkkeol-conscript
 
 ## Dev notes
 
@@ -11,7 +11,7 @@ Eh - E
 Uh - U
 Ae - a
 i - i
-Eo - o/O
+Eo - o
 u - u
 Ai - ai
 
