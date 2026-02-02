@@ -125,3 +125,25 @@ ___
 - [ ] Non-QWERTY unicode  
 - [ ] Non-QWERTY layout?
 - [ ] Handle hinting, because the stems (horizonatal) don't align when rendered despite being pixel-perfect aligned in the vectors.
+
+___
+
+## Changelog
+<details>
+    <summary>Expand changelog</summary>
+    
+    v 0.320 - Possible changes (waiting decision)  
+    #* ⟨T⟩ [q] moved to [Y]  
+    #* ⟨D⟩ [w] moved to [C]  
+    #* ⟨-⟩ [Q] removed (hyphen does the same thing)  
+    #* dex [O] copied to [q]  
+    #* elf [P] copied to [w]  
+    
+    
+    v 0.310 - Keyboard remapping and new symbol glyphs  
+    * ⟨lh⟩ [l] moved to [L]  
+    * ⟨L⟩ [L] moved to [l]  
+    * placeholder glyphs added to un-lettered keys: [ , ]  
+    * Added several more symbols & punctuation. (Designed by me as placeholders, so will change them when the script author has their own designs.)  
+    
+</details>
