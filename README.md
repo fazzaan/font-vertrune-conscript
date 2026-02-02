@@ -133,11 +133,11 @@ ___
     <summary>Expand changelog</summary>
 
 v 0.320 - Possible changes (waiting decision)  
-#* ⟨T⟩ [q] moved to [Y]  
-#* ⟨D⟩ [w] moved to [C]  
-#* ⟨-⟩ [Q] removed (hyphen does the same thing)  
-#* dex [O] copied to [q]  
-#* elf [P] copied to [w]  
+- [ ] ⟨T⟩ [q] moved to [Y]  
+- [ ] ⟨D⟩ [w] moved to [C]  
+- [ ] ⟨-⟩ [Q] removed (hyphen does the same thing)  
+- [ ] dex [O] copied to [q]  
+- [ ] elf [P] copied to [w]  
 
 
 v 0.310 - Keyboard remapping and new symbol glyphs  
